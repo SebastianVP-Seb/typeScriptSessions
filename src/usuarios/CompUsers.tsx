@@ -25,8 +25,6 @@ export const CompUsers = () => {
 
     console.log(mixFunctions);
 
-    console.log
-
   return (
     <div>
         <p>CompUsers</p>
