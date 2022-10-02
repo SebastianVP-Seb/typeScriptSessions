@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Comp from './calculadora/Comp'
 import { CompUsers } from './usuarios/CompUsers'
+import { CompUtilerias } from './utileriasTS/CompUtilerias'
+import { CompFilter } from './compFilter/CompFilter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +27,11 @@ function App() {
       {/* Para la calculadora  */}
       {/* <Comp /> */}
       {/* Para los usuarios */}
-      <CompUsers />
+      {/* <CompUsers /> */}
+      {/* Para las utilerías  */}
+      {/* <CompUtilerias /> */}
+      {/* Para los filtros  */}
+      <CompFilter />
     </div>
   )
 }

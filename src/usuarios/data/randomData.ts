@@ -1,4 +1,4 @@
-interface IRandomData {
+export interface IRandomData {
     text: string;
     numberrange: number;
     currency: string;
