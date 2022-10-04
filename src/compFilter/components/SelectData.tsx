@@ -1,18 +1,21 @@
 import React from 'react';
+import { IInformationPeople } from '../../usuarios/data/usuariosDB';
+import { IRandomData } from '../../usuarios/data/randomData';
+import { IProviderData, keyofIProviderData } from '../CompFilter';
 
-export const SelectData = () => {
+interface Props {
+  data: IProviderData;
+  selecData: (dataSelected: keyofIProviderData)=>void;
+};
 
-  const dataSource=[
-    {name: 'people'},
-    {name: 'random data'}
-  ];
+export const SelectData = ({data, selecData}: Props) => {
 
   return (
-    <select name='' id=''>
+    <select name='' id='' onChange={e=>selecData(e.target.value as keyofIProviderData)}>
       {
-        dataSource.map(item=>(<option key={item.name} value=''>{item.name}</option>))
-      }
-        
+        Object.keys(data).map(item=>
+          (<option key={item} value={item}>{item}</option>))
+      } 
     </select>
   );
 };
