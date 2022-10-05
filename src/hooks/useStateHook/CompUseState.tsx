@@ -1,4 +1,6 @@
 import React from 'react';
+import Cronometro from './homework/Cronometro';
+import InputColor from './homework/InputColor';
 import RenderConditional from './RenderConditional';
 
 const CompUseState = () => {
@@ -21,10 +23,12 @@ const CompUseState = () => {
   return (
     <>
         <div>CompUseState</div>
-        <button onClick={add} >+</button>
+        {/* <button onClick={add} >+</button>
         <label htmlFor="">{count}</label>
-        <button onClick={substract} >-</button>
-        <RenderConditional />
+        <button onClick={substract} >-</button> */}
+        {/* <RenderConditional /> */}
+        <Cronometro />
+        <InputColor />
     </>
   );
 };

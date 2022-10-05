@@ -29,9 +29,9 @@ function App() {
       {/* <CompUtilerias /> */}
       {/* Para los filtros  */}
       {/* <CompFilter /> */}
-      {/* <CompUseState /> */}
+      <CompUseState />
       {/* Formulario con useState  */}
-      <FormElement />
+      {/* <FormElement /> */}
     </div>
   )
 }
