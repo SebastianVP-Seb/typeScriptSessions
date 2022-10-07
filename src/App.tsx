@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Comp from './calculadora/Comp'
@@ -7,9 +6,12 @@ import { CompUtilerias } from './utileriasTS/CompUtilerias'
 import { CompFilter } from './compFilter/CompFilter'
 import CompUseState from './hooks/useStateHook/CompUseState'
 import FormElement from './hooks/useStateHook/FormElement'
+import CompUseEffect from './hooks/useEffect/CompUseEffect'
+import CompComments from './hooks/useEffect/CompComments'
+import ChangeDocumentTitle from './hooks/useEffect/homework/ChangeDocumentTitle'
+import BounceEffect from './hooks/useEffect/homework/BounceEffect'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -25,13 +27,17 @@ function App() {
       {/* <Comp /> */}
       {/* Para los usuarios */}
       {/* <CompUsers /> */}
-      {/* Para las utilerías  */}
+                                      {/* Para las utilerías  */}
       {/* <CompUtilerias /> */}
       {/* Para los filtros  */}
       {/* <CompFilter /> */}
-      <CompUseState />
+      {/* <CompUseState /> */}
       {/* Formulario con useState  */}
       {/* <FormElement /> */}
+      {/* <CompUseEffect /> */}
+      {/* <CompComments /> */}
+      {/* <ChangeDocumentTitle /> */}
+      <BounceEffect />
     </div>
   )
 }

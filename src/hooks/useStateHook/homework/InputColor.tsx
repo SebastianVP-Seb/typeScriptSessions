@@ -14,9 +14,9 @@ const InputColor: React.FC = () => {
 
   return (
     <div>
-        <h2>InputColor</h2>
-        <input type='color' value={`#${inputColor}`} onChange={handleChange} className='inputCenter' />
-        <img src={`https://via.placeholder.com//300/${inputColor}`} alt="Imagen colores" />
+      <h2>InputColor</h2>
+      <input type='color' value={`#${inputColor}`} onChange={handleChange} className='inputCenter' />
+      <img src={`https://via.placeholder.com//300/${inputColor}`} alt="Imagen colores" />
     </div>
   );
 };

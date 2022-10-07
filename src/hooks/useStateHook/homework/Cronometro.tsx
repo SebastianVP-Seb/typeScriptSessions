@@ -1,25 +1,34 @@
 import React from 'react';
 
+let interval: NodeJS.Timer; // El intervalo debe ser declarado por fuera del comp para que funcione
+
 const Cronometro: React.FC = () => {
     
     const initValue:number=7;
-    let interval: NodeJS.Timer;
 
     const [segundos,setSegundos]=React.useState<number>(initValue);
     const [vuelta, setVuelta]=React.useState<boolean>(false);
 
-    React.useEffect(()=>{
-        if(vuelta) {
-            interval=setInterval(()=>{
-                setSegundos(prevState=>prevState+1);
-            },1000);
-        }
-        return (()=>clearInterval(interval));
-    },[vuelta]);
+    // React.useEffect(()=>{
+    //     if(vuelta) {
+    //         interval=setInterval(()=>{
+    //             setSegundos(prevState=>prevState+1);
+    //         },1000);
+    //     }
+    //     return (()=>clearInterval(interval));
+    // },[vuelta]);
 
-    const handleStart=()=>setVuelta(true);
+    const handleStart=()=>{
+        setVuelta(true);
+        interval=setInterval(()=>{
+            setSegundos(prevState=>prevState+1);
+        },1000);
+    };
 
-    const handleStop=()=>setVuelta(false);
+    const handleStop=()=>{
+        setVuelta(false);
+        clearInterval(interval);
+    };
 
     const handleReset=()=>setSegundos(initValue);
 
