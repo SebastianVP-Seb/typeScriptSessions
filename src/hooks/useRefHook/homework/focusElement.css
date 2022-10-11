@@ -1,0 +1,30 @@
+.focus_element_alert {
+    background-color: blueviolet;
+    color: black;
+    width: 100%;
+    height: 5rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.container_alert {
+    height: 200vh;
+}
+
+.container_btn_ref {
+    display: flex;
+    align-items: flex-end;
+}
+
+.focus_element-btn {
+    border-radius: 3px;
+    padding: 1.5rem;
+    background-color: aqua;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+}
+

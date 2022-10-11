@@ -10,6 +10,10 @@ import CompUseEffect from './hooks/useEffect/CompUseEffect'
 import CompComments from './hooks/useEffect/CompComments'
 import ChangeDocumentTitle from './hooks/useEffect/homework/ChangeDocumentTitle'
 import BounceEffect from './hooks/useEffect/homework/BounceEffect'
+import CompUseRef from './hooks/useRefHook/CompUseRef'
+import FocusElement from './hooks/useRefHook/homework/FocusElement'
+import Coordenadas from './hooks/useRefHook/homework/Coordenadas'
+import ComUseMemo from './hooks/useMemoHook/ComUseMemo'
 
 function App() {
 
@@ -37,7 +41,11 @@ function App() {
       {/* <CompUseEffect /> */}
       {/* <CompComments /> */}
       {/* <ChangeDocumentTitle /> */}
-      <BounceEffect />
+      {/* <BounceEffect /> */}
+      {/* <CompUseRef /> */}
+      {/* <FocusElement /> */}
+      {/* <Coordenadas /> */}
+      <ComUseMemo />
     </div>
   )
 }
