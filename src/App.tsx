@@ -14,6 +14,8 @@ import CompUseRef from './hooks/useRefHook/CompUseRef'
 import FocusElement from './hooks/useRefHook/homework/FocusElement'
 import Coordenadas from './hooks/useRefHook/homework/Coordenadas'
 import ComUseMemo from './hooks/useMemoHook/ComUseMemo'
+import CountersBox from './hooks/useMemoHook/homework/CountersBox'
+import ToDoContextReducer from './hooks/toDoListContextReducer/ToDoContextReducer'
 
 function App() {
 
@@ -45,7 +47,9 @@ function App() {
       {/* <CompUseRef /> */}
       {/* <FocusElement /> */}
       {/* <Coordenadas /> */}
-      <ComUseMemo />
+      {/* <ComUseMemo /> */}
+      {/* <CountersBox /> */}
+      <ToDoContextReducer />
     </div>
   )
 }
