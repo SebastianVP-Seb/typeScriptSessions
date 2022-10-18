@@ -4,6 +4,7 @@ import { IconType } from 'react-icons';
 import { GiCrossMark, GiSelfLove } from "react-icons/gi";
 import './styles/itemToDo.scss';
 import { IItemToDoComp } from './types';
+import { useTheme } from './customHooks/useTheme';
 
 const ItemToDo: React.FC<IItemToDoComp> = ({id, isDone, priority, title, toggleDone, deleteItem}) => {
 
@@ -12,6 +13,8 @@ const ItemToDo: React.FC<IItemToDoComp> = ({id, isDone, priority, title, toggleD
   //sin memo y useCallback en la función: se renderizan todos los elementos de la lista, con ellos:
   //sólo se renderiza el que cambió
   React.useEffect(()=>console.log('renderizando ItemToDoComp'));
+
+  const { theme } = useTheme();
 
   return (
       <a key={id} className={`panel-block is-active container_todo ${isDone && 'is_done'}`} onClick={()=>toggleDone(id)} >
@@ -27,7 +30,7 @@ const ItemToDo: React.FC<IItemToDoComp> = ({id, isDone, priority, title, toggleD
           : (<GiCrossMark />)
         }
         </span>
-        <button className="button is-danger" onClick={()=>deleteItem(id)} >
+        <button className={`button ${theme}`} onClick={()=>deleteItem(id)} >
           Eliminar
         </button>
       </a>

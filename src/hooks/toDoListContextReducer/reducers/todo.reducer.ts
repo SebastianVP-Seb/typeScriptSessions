@@ -29,5 +29,3 @@ export const todoReducer=(state = initState, action: TypeActionToDoReducer)=>{
         default: return state;
     };
 };
-
-// ADIMX_UNIVERSE_DUMMY_T1B_277931

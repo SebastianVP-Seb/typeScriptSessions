@@ -4,6 +4,7 @@ import { IErrorsForm } from './types';
 import { IToDo } from './descriptor/types';
 import { TypeActionAdd } from './reducers/type';
 import { ActionAddToDo } from './actions/toDo.actions';
+import { useTheme } from './customHooks/useTheme';
 
 let toDos: Array<IToDo>=[];
 
@@ -18,6 +19,8 @@ const FormToDo: React.FC<IFormToDoComp> = ({dispatch}) => {
     //Para evitar poner muchos estados
     const selectPriority=React.useRef<HTMLSelectElement>(null);
     const inputToDo=React.useRef<HTMLInputElement>(null);
+
+    const {theme} = useTheme();
 
     const handleSubmitForm=(e: FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
@@ -79,8 +82,8 @@ const FormToDo: React.FC<IFormToDoComp> = ({dispatch}) => {
   return (
     <form onSubmit={handleSubmitForm} className='field has-addons'>
         <div className="control">
-          <span className="select">
-            <select ref={selectPriority} placeholder='Seleccionar prioridad'>
+          <span className={`select ${theme}`}>
+            <select ref={selectPriority} placeholder='Seleccionar prioridad' className={`${theme}`}>
               <option>Prioridad</option>
               <option>Baja</option>
               <option>Media</option>
@@ -89,7 +92,7 @@ const FormToDo: React.FC<IFormToDoComp> = ({dispatch}) => {
           </span>
         </div>
         <div className="control is-expanded">
-          <input ref={inputToDo} className="input" type="text" placeholder="Escribe aquí una tarea..." />
+          <input ref={inputToDo} className={`input ${theme}`} type="text" placeholder="Escribe aquí una tarea..." />
           {
             errors.length > 0 && errors.map((item)=>(
               <p key={item.message} className='help is-danger' >
@@ -104,7 +107,7 @@ const FormToDo: React.FC<IFormToDoComp> = ({dispatch}) => {
           } */}
         </div>
         <div className="control">
-          <button className="button" type='submit' >
+          <button className={`button ${theme}`} type='submit' >
             <span className="icon is-small">
               <AiFillZhihuCircle />
             </span>

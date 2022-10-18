@@ -7,6 +7,7 @@ import FormToDo from './FormToDo';
 import PanelToDo from './PanelToDo';
 import { todoReducer } from './reducers/todo.reducer';
 import { mockToDos } from './utils/mockToDos';
+import { ThemeContext, ThemeProvider } from './context';
 
 const ToDoContextReducer = () => {
 
@@ -47,13 +48,16 @@ const ToDoContextReducer = () => {
   //   }}))
   // }, []);
 
+  //Demostración de ejecución de un comp declarado como una cte
+  const HeroRender = <Hero title='iAmSebastian' subtitle='ToDoList'/>;
+
   return (
-    <>
-      <Hero title='iAmSebastian' subtitle='ToDoList'/>
+    <ThemeProvider>
+      {HeroRender}
       <FormToDo dispatch={dispatch} />
       <Tabs getTabSelected={getTabSelected} />
       <PanelToDo toDosFiltered={todosFiltered} dispatch={dispatch} />
-    </>
+    </ThemeProvider>
   );
 };
 

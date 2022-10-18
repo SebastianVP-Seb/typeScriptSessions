@@ -1,4 +1,5 @@
 import { ITabItem, TypeIdTab, IToDo } from './descriptor/types';
+import { TypeActionDelete, TypeActionToggleChecked } from './reducers/type';
 
 export interface IHeroComp {
     title: string;
@@ -22,4 +23,9 @@ export interface IErrorsForm {
 export interface IItemToDoComp extends IToDo {
     toggleDone: (id: string)=>void;
     deleteItem: (id: string)=>void;
-  };
+};
+
+export interface IPanelToDoComp {
+    toDosFiltered: Array<IToDo>;
+    dispatch: (value: TypeActionDelete | TypeActionToggleChecked)=>void;
+};
